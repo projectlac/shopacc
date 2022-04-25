@@ -1,13 +1,19 @@
 import { FC, ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import { Outlet } from 'react-router-dom';
+import HeaderHome from 'src/components/Header/HeaderHome';
 
 interface BaseLayoutProps {
   children?: ReactNode;
 }
 
 const BaseLayout: FC<BaseLayoutProps> = ({ children }) => {
-  return <>{children || <Outlet />}</>;
+  return (
+    <>
+      <HeaderHome />
+      {children || <Outlet />}
+    </>
+  );
 };
 
 BaseLayout.propTypes = {
