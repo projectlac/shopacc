@@ -5,8 +5,6 @@ import poster from 'src/assets/videos/play.png';
 import play from 'src/assets/videos/playbutton.png';
 import close from 'src/assets/images/close.png';
 
-import video from 'src/assets/videos/3e78e80.mp4';
-
 const BgWrap = styled(Box)(
   ({ theme }) => `
     height: 100vh;
@@ -93,7 +91,12 @@ function ModuleVideo() {
   const [show, setShow] = useState<boolean>(false);
   return (
     <BgWrap>
-      <video autoPlay src={video} muted style={{ width: '100vw ' }} />
+      <video
+        autoPlay
+        src="https://genshin.hoyoverse.com/_nuxt/videos/3e78e80.mp4"
+        muted
+        style={{ width: '100vw ' }}
+      />
       <PostBox>
         <BoxEntry>
           <PlayButton
