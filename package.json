@@ -4,6 +4,7 @@
   "title": "Singapore Pool Admin Dashboard",
   "description": "Singapore Pool",
   "private": false,
+  "homepage": ".",
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^33.0.0",
     "@ckeditor/ckeditor5-react": "^4.0.0",
