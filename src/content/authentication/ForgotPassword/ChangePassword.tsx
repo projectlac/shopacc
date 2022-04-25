@@ -1,9 +1,9 @@
 import { Box, Button, FormControl, TextField, Typography } from '@mui/material';
-import React, { useContext, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router';
 
-import { AuthContext } from 'src/App';
+// import { AuthContext } from 'src/App';
 
 interface PropsChangePassword {
   email: string;
@@ -18,14 +18,14 @@ function ChangePassword({ email }: PropsChangePassword) {
     mode: 'onChange',
     reValidateMode: 'onChange'
   });
-  const { handleOpenToast, handleChangeMessageToast } = useContext(AuthContext);
+  // const { handleOpenToast, handleChangeMessageToast } = useContext(AuthContext);
 
-  const nav = useNavigate();
+  // const nav = useNavigate();
 
   const password = useRef({});
   password.current = watch('password', '');
   const onSubmit = async (data) => {
-    const { temporary, password, confirm } = data;
+    // const { temporary, password, confirm } = data;
   };
   return (
     <Box

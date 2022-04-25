@@ -7,18 +7,16 @@ import {
   TextField,
   Typography
 } from '@mui/material';
-import { useContext } from 'react';
+// import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
-
-import { AuthContext } from 'src/App';
+import { Link } from 'react-router-dom';
+// import { AuthContext } from 'src/App';
 import logo from 'src/assets/images/logo/Image 9.png';
-
 import BpCheckbox from 'src/components/Common/BpCheckbox';
 
 function Login() {
-  const { handleLoginIn, handleOpenToast, handleChangeMessageToast } =
-    useContext(AuthContext);
+  // const { handleLoginIn, handleOpenToast, handleChangeMessageToast } =
+  //   useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -28,10 +26,10 @@ function Login() {
     mode: 'onChange',
     reValidateMode: 'onChange'
   });
-  const nav = useNavigate();
+  // const nav = useNavigate();
 
   const onSubmit = async (data) => {
-    const { username, password } = data;
+    // const { username, password } = data;
   };
 
   return (

@@ -1,28 +1,15 @@
-import {
-  Box,
-  Button,
-  Card,
-  Container,
-  FormControl,
-  TextField,
-  Typography
-} from '@mui/material';
-import { useContext, useState } from 'react';
-import { useForm } from 'react-hook-form';
-
-import { AuthContext } from 'src/App';
-
-import ChangePassword from './ChangePassword';
+import { Box, Container } from '@mui/material';
+// import { useForm } from 'react-hook-form';
 
 function ForgotPassword() {
-  const [checkFillEmail, setCheckFillEmail] = useState<Boolean>(false);
-  const [fillEmail, setFillEmail] = useState<string>('');
-  const { register, handleSubmit } = useForm();
-  const { handleOpenToast, handleChangeMessageToast } = useContext(AuthContext);
+  // const [checkFillEmail, setCheckFillEmail] = useState<Boolean>(false);
+  // const [fillEmail, setFillEmail] = useState<string>('');
+  // const { register, handleSubmit } = useForm();
+  // const { handleOpenToast, handleChangeMessageToast } = useContext(AuthContext);
 
-  const onSubmit = async (data) => {
-    const { email } = data;
-  };
+  // const onSubmit = async (data) => {
+  //   const { email } = data;
+  // };
 
   return (
     <Box
@@ -34,7 +21,7 @@ function ForgotPassword() {
       }}
     >
       <Container maxWidth="lg" sx={{ height: '100vh', pt: 15 }}>
-        <Card sx={{ p: { md: 10, xs: 3 } }}>
+        {/* <Card sx={{ p: { md: 10, xs: 3 } }}>
           <Typography variant="h1" component="h1" align="center" sx={{ mb: 2 }}>
             {checkFillEmail ? 'Change Password' : 'Forgot Password'}
           </Typography>
@@ -91,7 +78,7 @@ function ForgotPassword() {
           ) : (
             <ChangePassword email={fillEmail} />
           )}
-        </Card>
+        </Card> */}
       </Container>
     </Box>
   );
