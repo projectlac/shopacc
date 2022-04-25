@@ -93,6 +93,7 @@ function ModuleVideo() {
     <BgWrap>
       <video
         autoPlay
+        loop
         src="https://genshin.hoyoverse.com/_nuxt/videos/3e78e80.mp4"
         muted
         style={{ width: '100vw ' }}
