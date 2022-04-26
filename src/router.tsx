@@ -20,6 +20,8 @@ const ForgotPassword = Loader(
 
 // Dashboards
 const Home = Loader(lazy(() => import('src/components/Pages/Home')));
+const News = Loader(lazy(() => import('src/components/Pages/News')));
+
 // Applications
 
 // Status
@@ -38,7 +40,10 @@ const routes = (isLogin, role) => [
 
         element: <Home />
       },
-
+      {
+        path: 'tin-tuc',
+        element: <News />
+      },
       {
         path: '*',
         element: <Status404 />

@@ -2,7 +2,10 @@
   font-family: farro;
   src: url('../fonts/Farro-Regular.ttf');
 }
-
+@font-face {
+  font-family: michos;
+  src: url('../fonts/ZH-CN.ttf');
+}
 .ck-content {
   min-height: 200px;
 }
