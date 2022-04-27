@@ -2,7 +2,7 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
 import logo from 'src/assets/images/logo-nho-1.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 const HeaderWrapper = styled(Box)(
   ({ theme }) => `
   position: fixed;
@@ -36,8 +36,12 @@ function HeaderHome() {
               display: 'flex',
               '& a': {
                 color: '#fff',
-                margin: ' 0 15px',
+                margin: ' 0 45px',
                 textDecoration: 'none',
+                paddingBottom: '6px',
+                '&.active': {
+                  borderBottom: '3px solid #48A6E2'
+                },
                 '&:hover': {
                   textShadow:
                     '0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff'
@@ -46,25 +50,22 @@ function HeaderHome() {
             }}
           >
             <Typography>
-              <Link to="/">Trang Chủ</Link>
+              <NavLink to="/" end>
+                Trang Chủ
+              </NavLink>
             </Typography>
             <Typography>
-              <Link to="/tin-tuc">Tin Tức</Link>
+              <NavLink to="/tin-tuc">Tin Tức</NavLink>
             </Typography>
             <Typography>
-              <Link to="/danh-sach-tai-khoan">Danh sách tài khoản </Link>
+              <NavLink to="/mua-tai-khoan">Mua tài khoản </NavLink>
+            </Typography>
+
+            <Typography>
+              <NavLink to="/nap-tien">Nạp Tiền </NavLink>
             </Typography>
             <Typography>
-              <Link to="/su-kien">Sự Kiện</Link>
-            </Typography>
-            <Typography>
-              <Link to="/goods-anime">Goods Anime</Link>
-            </Typography>
-            <Typography>
-              <Link to="/nap-vi">Nạp Ví </Link>
-            </Typography>
-            <Typography>
-              <Link to="/nap-nguyen-thach">Nạp Nguyên Thạch</Link>
+              <NavLink to="/lien-he">Liên hệ</NavLink>
             </Typography>
           </Box>
         </Box>
