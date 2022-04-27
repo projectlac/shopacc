@@ -1,15 +1,16 @@
 import { Box, Button, Typography } from '@mui/material';
-import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
-import poster from 'src/assets/videos/play.png';
-import play from 'src/assets/videos/playbutton.png';
-import close from 'src/assets/images/close.png';
+import React, { useState } from 'react';
 import background from 'src/assets/images/Background.png';
+import BGVideo from 'src/assets/images/frame-video.png';
 import Frame from 'src/assets/images/Frame.png';
 import Frame2 from 'src/assets/images/Frame2.png';
 import Frame3 from 'src/assets/images/Layer16.png';
 import Even from 'src/assets/images/Layer17.png';
 import Icon from 'src/assets/images/Layer19.png';
+import OnHover from 'src/assets/images/tag-2.png';
+import poster from 'src/assets/videos/play.png';
+import play from 'src/assets/videos/playbutton.png';
 
 const BgWrap = styled(Box)(
   ({ theme }) => `
@@ -120,24 +121,26 @@ const Title = styled(Typography)(
   text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
       `
 );
-const ButtonEven = styled(Button)(
-  ({ theme }) => `
-      
-    background: url(${Even});
-    color: #fff;
-    font-size: 20px;
-    display: flex;
-    font-weight:600;
-    align-items: center;
-    justify-content: center;
-    background-position: bottom right;
-    height: 77px;
-    width: 200px;
-    background-size: cover;
-    padding-top: 15px;
-    justify-content: flex-start;
-        `
-);
+const ButtonEven = styled(Button)({
+  background: `url(${Even})`,
+  color: '#fff',
+  fontSize: '20px',
+  display: 'flex',
+  fontWeight: 600,
+  alignItems: 'center',
+  backgroundPosition: 'bottom right',
+  height: '77px',
+  width: '200px',
+  backgroundSize: 'cover',
+  paddingTop: '15px',
+  justifyContent: 'flex-start',
+  transition: 'all 0.3s ease',
+  '&:hover': {
+    background: `url(${OnHover})`,
+    backgroundPosition: 'bottom right',
+    backgroundSize: 'cover'
+  }
+});
 const BoxEntry = styled(Box)(
   ({ theme }) => `
     width: 356px;
@@ -172,7 +175,13 @@ function ModuleVideo() {
       <FrameTop>
         <PostBox>
           <VideoBox>
-            <video id="video" width="825" height="465" onClick={pauseVideo}>
+            <video
+              id="video"
+              width="825"
+              height="465"
+              onClick={pauseVideo}
+              poster={BGVideo}
+            >
               <source
                 src="https://drive.google.com/uc?export=download&id=1gKNQZKReMVcUeh5udxumDgF12q9qxJAo"
                 type="video/mp4"
