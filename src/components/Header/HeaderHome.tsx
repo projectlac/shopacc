@@ -55,10 +55,10 @@ function HeaderHome() {
               </NavLink>
             </Typography>
             <Typography>
-              <NavLink to="/tin-tuc">Tin Tức</NavLink>
+              <NavLink to="/mua-tai-khoan">Mua tài khoản </NavLink>
             </Typography>
             <Typography>
-              <NavLink to="/mua-tai-khoan">Mua tài khoản </NavLink>
+              <NavLink to="/tin-tuc">Tin Tức</NavLink>
             </Typography>
 
             <Typography>
