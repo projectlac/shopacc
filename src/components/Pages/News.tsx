@@ -1,10 +1,10 @@
 import React from 'react';
-import HotNews from '../Module/HotNews';
+import SliderBox from '../Module/SliderBox';
 
 function News() {
   return (
     <div>
-      <HotNews />
+      <SliderBox />
     </div>
   );
 }
