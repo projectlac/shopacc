@@ -8,7 +8,7 @@ import BGNews from 'src/assets/images/newsDes/BGNews.png';
 import BGNewsTop from 'src/assets/images/newsDes/BGNewsTop.png';
 import BGNewsBottom from 'src/assets/images/newsDes/BGNewsBottom.png';
 import Paimon from 'src/assets/images/newsDes/Paimon.png';
-import HotNews from 'src/assets/images/newsDes/HotNews.png';
+import HotNews from 'src/assets/images/newsDes/HotNews.jpg';
 import Clip from 'src/assets/images/newsDes/Clip.png';
 
 const TitleHighlight = styled(Box)({
